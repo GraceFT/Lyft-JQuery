@@ -12,6 +12,7 @@ function validateForm(){
 validateName();
 validateLastName();
 validateEmail();
+validateCheck();
 
     if (validateName() && validateLastName()&& validateEmail()&& validateCheck()){
         var next= $("#btn_next");
@@ -21,15 +22,16 @@ validateEmail();
         localStorage.setItem("emailUser",email.val());
     }
 }
-/*function upperCaseName(_id){
-    var element=$(_id);
-    element.val() = element.val().charAt(0).toUpperCase() + element.val().slice(1); 
-}*/
+function upperCaseName(_id){
+    if(_id.toLowerCase){
+       $(_id).val() = $(_id).val().charAt(0).toUpperCase() + $(_id).val().slice(1);  
+    } 
+}
 function validateName(){
     var valiName = $("#name");
     var isName= false;
     if(valiName.val().length!=0 && valiName.val().length<30 && valiName.val().match(/^[a-zA-Z\s]*$/)){
-        //upperCaseName("#name");
+        upperCaseName(valiName);
        $("#avise").html('<span style="color:green; font-size:11px; font-style:italic;">Validate Name and Lastname</span>');
         isName=true; 
     }else{
