@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuario</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <div class="container text-center">
+          <a href="signup.html"><i class="glyphicon glyphicon-chevron-left arrow"></i></a><h2>Sign up</h2>
+          <f3>Join now for free ride credit</f3>
+          <hr> 
+              <div class="row">
+                <div class="col-md-12">
+                 <form>
+                  <div class="form-group">
+                    <div class="input-group user">
+                        <span class=" input-group-addon icon"><span class="glyphicon glyphicon-user"></span></span> 
+                        <input name="name" id="name" type="text" class="form-control" placeholder="Name" autofocus="" onkeyup="valName()" maxlength="30">
+                            <span class="input-group-addon color"></span>
+                        <input name="lastname" id="lastname" type="text" class="form-control" placeholder="Lastname" autofocus="" onkeyup="valLastName()" maxlength="30">
+                    </div>
+                            <div id="avise"></div>
+                  </div>
+                    <div class="input-group user">
+                        <span class="input-group-addon icon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="email" class="form-control" placeholder="Email" id="email" maxlength="50" onkeyup="valEmail()">
+                    </div>
+                  <div id="avisemail"></div>
+                </form>
+                </div>
+              </div>
+              
+        <div class="checkbox check">
+            <input type="checkbox" id="check" onclick="valCheck()">I agree to Lyft's <a href=""terms>Terms of Service</a>
+        </div>
+        <div id="checkdiv"></div>
+<!---------------------------BUTTON NEXT--------------------->
+    <div class="text-center next" id="button-next">
+        <a href="#" onclick="validateForm()" id="btn_next">Next</a>
+    </div>
+    </div>
+</header>
+<script src="js/info-user.js"></script>
+</body>
+</html>

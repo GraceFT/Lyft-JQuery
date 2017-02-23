@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lyft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body onload="init()" id="button_next">
+<!--HEADER------------------------------------->
+<header>
+    <div class="container text-center">
+        <a href="index.html"><i class="glyphicon glyphicon-chevron-left arrow"></i></a>
+        <h2>Sign up</h2>
+        <p>Join now for free ride credit</p>
+        <hr>
+    </div>
+</header>
+<!--SECTION------------------------------------------------------>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">     
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" aria-expanded="false" id="button"><a href="country-select.html"><img src="images/flags/flat/16/Peru.png" id="flag-country"><span class="caret"></span></a></button>
+                        <button type="button" class="btn btn-default" id="button"><strong id="code-country">+51</strong></button>
+                    </div>
+
+                    <input type="text" class="form-control" placeholder="123456789" id="user-number" onkeyup="numberLong()">
+                </div>
+                <div id="avise" class="text-center"></div>
+            <br>   
+            <p class="text-center">We'll send a text to verify your phone</p>
+        </div>
+        </div>
+    </div>
+</section>
+<!--button---------------------------------------BUTTON-NEXT-->
+<div class="text-center next">
+    <a href="#" id="btn-next" onclick="toDoAnAlert()">Next</a>
+</div>
+<!--------------------------SCRIPT---------------------------->
+<script type="text/javascript" src="js/signup.js"></script>
+</body>
+</html>
