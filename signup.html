@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">    
+    <script src="jquery/jquery-3.1.1.min.js"></script>
 </head>
-<body onload="init()" id="button_next">
+<body id="button_next">
 <!--HEADER------------------------------------->
 <header>
     <div class="container text-center">
@@ -31,6 +32,7 @@
 
                     <input type="text" class="form-control" placeholder="123456789" id="user-number" onkeyup="numberLong()">
                 </div>
+                <!-----------------------------div message-------------------------------->
                 <div id="avise" class="text-center"></div>
             <br>   
             <p class="text-center">We'll send a text to verify your phone</p>
@@ -43,6 +45,6 @@
     <a href="#" id="btn-next" onclick="toDoAnAlert()">Next</a>
 </div>
 <!--------------------------SCRIPT---------------------------->
-<script type="text/javascript" src="js/signup.js"></script>
+<script src="jquery/signup.js"></script>
 </body>
 </html>
