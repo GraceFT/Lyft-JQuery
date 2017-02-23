@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/favicon.ico">    
-    <script src="jquery/jquery-3.1.1.min.js"></script>
 </head>
 <body id="button_next">
 <!--HEADER------------------------------------->
@@ -30,7 +29,7 @@
                         <button type="button" class="btn btn-default" id="button"><strong id="code-country">+51</strong></button>
                     </div>
 
-                    <input type="text" class="form-control" placeholder="123456789" id="user-number" onkeyup="numberLong()">
+                    <input type="text" class="form-control" placeholder="123456789" id="user-number">
                 </div>
                 <!-----------------------------div message-------------------------------->
                 <div id="avise" class="text-center"></div>
@@ -42,9 +41,10 @@
 </section>
 <!--button---------------------------------------BUTTON-NEXT-->
 <div class="text-center next">
-    <a href="#" id="btn-next" onclick="toDoAnAlert()">Next</a>
+    <a href="#" id="btn-next">Next</a>
 </div>
 <!--------------------------SCRIPT---------------------------->
+ <script src="jquery/jquery-3.1.1.min.js"></script>
 <script src="jquery/signup.js"></script>
 </body>
 </html>
