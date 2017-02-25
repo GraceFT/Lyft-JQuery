@@ -1,4 +1,5 @@
 /**{outline: 1px solid rgba(0,255,0,0.5);}*/
+/********************************************************FRONT PAGE********************/
 .background{
     background-image: url(../images/orig_230387.jpg);
     background-size: cover;
@@ -46,12 +47,12 @@
     border: none;
 }
 
-/*****CODE-COUNTRY************/
+/****************************************CODE-COUNTRY*******************************************/
 #user-number{
     border-left: none;
     box-shadow: none;
 }
-/******USER'S INFORMATION**/
+/*****************************************USER'S INFORMATION************************************/
 .arrow{
     position: absolute;
     left: 20px;
@@ -93,23 +94,16 @@
     background-color: #fff;
     border-right: none;
 }
-.check input{
-    background-color: #fff;
-}
 #name{
     border-right: none;
     box-shadow: none;
     border-left: none;
 }
-#lastname{
+#lastname, #email{
     border-left: none;
     box-shadow: none;
 }
-#email{
-    border-left: none;
-    box-shadow: none;
-}
-/*******SELECT-COUNTRY*******/
+/***********************************************SELECT-COUNTRY***********************************/
 .countries{
     padding-top: 25px; border-top: 1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(0,0,0,0.1);background-color: #efeff4;}
 .countries span{
@@ -145,7 +139,7 @@
     border-radius: 10px;
     
 }
-/***********placeholder********/
+/*********************************************PLACEHOLDER****************************/
 .user input::-webkit-input-placeholder {
   color: #D7D7D9;
 }

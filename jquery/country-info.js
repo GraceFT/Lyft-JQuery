@@ -1,5 +1,5 @@
 $(document).ready(init);
-    
+//////////////////////////////////////////////PARSE COUNTRIES/////////////////////////////////////////////////   
 function init(){
 var flags = $("#paisDates");
 var paises = $.parseJSON(jsoncountry);
@@ -15,7 +15,7 @@ var paises = $.parseJSON(jsoncountry);
         $(this).on('click',onClick);
     });  
 }
-
+///////////////////////////////////////////////////SET FLAG AND CODE////////////////////////////////////////////
 function onClick(evt)
 {
     var srcImage=$(evt.currentTarget).find(".bandera").attr("src");

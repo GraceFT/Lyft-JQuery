@@ -1,5 +1,5 @@
 $(document).ready(init);
-
+///////////////////////////////////////////ADDING EVENTS////////////////////////////////////////////
 function init(){
     $("#name").keyup(validateName);
     $("#lastname").keyup(validateLastName);
@@ -7,7 +7,7 @@ function init(){
     $("#check").click(validateCheck);
     $("#button-next").click(validateForm);
 }
-
+///////////////////////////////////////////VALIDATE FORM////////////////////////////////////////////
 function validateForm(){
 validateName();
 validateLastName();
@@ -17,22 +17,24 @@ validateCheck();
     if (validateName() && validateLastName()&& validateEmail()&& validateCheck()){
         var next= $("#btn_next");
         next.attr("href","app.html");
-        localStorage.setItem("nameUser",name);
+        localStorage.setItem("nameUser",name.val());
         localStorage.setItem("lastnameUser",lastname.val());
         localStorage.setItem("emailUser",email.val());
     }
 }
-function upperCaseName(_id){
-    if(_id.toLowerCase){
-       $(_id).val() = $(_id).val().charAt(0).toUpperCase() + $(_id).val().slice(1);  
-    } 
-}
+///////////////////////////////////////////UPPERCASE NAME////////////////////////////////////////////
+function CapitaliseFirstLetter(_id) {
+        var txt = _id.val().toLowerCase();
+        _id.val(txt.replace(/^(.)|\s(.)/g, function($upperCase) {
+        return $upperCase.toUpperCase(); }));
+        }
+///////////////////////////////////////////VALIDATE NAME////////////////////////////////////////////
 function validateName(){
     var valiName = $("#name");
     var isName= false;
     if(valiName.val().length!=0 && valiName.val().length<30 && valiName.val().match(/^[a-zA-Z\s]*$/)){
-        upperCaseName(valiName);
-       $("#avise").html('<span style="color:green; font-size:11px; font-style:italic;">Validate Name and Lastname</span>');
+        CapitaliseFirstLetter(valiName);
+        $("#avise").html('<span style="color:green; font-size:11px; font-style:italic;">Validate Name and Lastname</span>');
         isName=true; 
     }else{
         $("#avise").html('<span style="color:#ff00bf; font-size:11px; font-style:italic;">Complete with your name and lastname</span>');
@@ -40,11 +42,12 @@ function validateName(){
     }
     return isName;
 }
+///////////////////////////////////////////VALIDATE LASTNAME////////////////////////////////////////////
 function validateLastName(){
     var valiLast = $("#lastname");
     var isLastName= false;
     if(valiLast.val().length!=0 && valiLast.val().length<30 && valiLast.val().match(/^[a-zA-Z\s]*$/)){
-        //upperCaseName("#lastname");
+        CapitaliseFirstLetter(valiLast);
        $("#avise").html('<span style="color:green; font-size:11px; font-style:italic;">Validate Name and Lastname</span>');
         isLastName=true; 
     }else{
@@ -53,6 +56,7 @@ function validateLastName(){
     }
     return isLastName;
 }
+///////////////////////////////////////////VALIDATE EMAIL////////////////////////////////////////////
 function validateEmail(){
     var valiMail = $("#email");
     var isEmail= false;
@@ -65,7 +69,7 @@ function validateEmail(){
     }
     return isEmail;
 }
-
+///////////////////////////////////////////VALIDATE CHECKBOX////////////////////////////////////////////
 function validateCheck(){
     var check= $("#check").is(":checked");
     var isCheck = false;
