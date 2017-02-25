@@ -16,10 +16,13 @@ validateCheck();
 
     if (validateName() && validateLastName()&& validateEmail()&& validateCheck()){
         var next= $("#btn_next");
+        var valiName = $("#name");
+        var valiLast = $("#lastname");
+        var valiMail = $("#email");
+        localStorage.setItem("nameUser",valiName.val());
+        localStorage.setItem("lastnameUser",valiLast.val());
+        localStorage.setItem("emailUser",valiMail.val());
         next.attr("href","app.html");
-        localStorage.setItem("nameUser",name.val());
-        localStorage.setItem("lastnameUser",lastname.val());
-        localStorage.setItem("emailUser",email.val());
     }
 }
 ///////////////////////////////////////////UPPERCASE NAME////////////////////////////////////////////
