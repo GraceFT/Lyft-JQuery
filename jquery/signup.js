@@ -1,15 +1,14 @@
 $(document).ready(init);
 ///////////////////////////////////////////INIT WITH SET INFO////////////////////////////////////////////
 function init(){
-    $('#btn-next').click(toDoAnAlert);
-    $('#user-number').keyup(numberLong);
+    $('#btn-next').on("click",toDoAnAlert);
+    $('#user-number').on("keyup",numberLong);
     /*$("#input").keydown(justNumbers)*/
-    
     var imgSrc= $("#flag-country");
     var codePais= $("#code-country");
     var imagesC = localStorage.getItem("cImage");
     var codeC = localStorage.getItem("codesPhone");
-    
+    var phone = localStorage.getItem("phone");
     imgSrc.attr({"src":imagesC});
     codePais.text(codeC); 
 }

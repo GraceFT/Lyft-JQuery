@@ -1,11 +1,11 @@
 $(document).ready(init);
 ///////////////////////////////////////////ADDING EVENTS////////////////////////////////////////////
-function init(){
-    $("#name").keyup(validateName);
-    $("#lastname").keyup(validateLastName);
-    $("#email").keyup(validateEmail);
-    $("#check").click(validateCheck);
-    $("#button-next").click(validateForm);
+function init() {
+    $("#name").on("keyup",validateName);
+    $("#lastname").on("keyup",validateLastName);
+    $("#email").on("keyup",validateEmail);
+    $("#check").on("click",validateCheck);
+    $("#button-next").on("click",validateForm);
 }
 ///////////////////////////////////////////VALIDATE FORM////////////////////////////////////////////
 function validateForm(){
