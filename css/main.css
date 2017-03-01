@@ -1,4 +1,4 @@
-/**{outline: 1px solid rgba(0,255,0,0.5);}*/
+*{outline: 1px solid rgba(0,255,0,0.5);}
 /********************************************************FRONT PAGE********************/
 .background{
     background-image: url(../images/orig_230387.jpg);
@@ -126,18 +126,81 @@
     margin: 40px 0;
     font-weight: bold;
 }
+/************************MAPA****************************/
+.themap{
+    height: 100%; 
+  width: 100%; 
+  position:absolute;   
+}
 .pickup{
-    background-color: rgb(135,0,91);
+    background-color: rgb(54,30,131);
+}
+.request{
+      background-color: rgb(255,0,191);
+}
+.pickup, .request{
     position: absolute;
     padding: 20px;
-    bottom: 0;
-    right: 0;
-    left:0;
+    bottom: 10px;
+    right: 10px;
+    left:10px;
     color: #fff;
-    text-align: center;
-    margin: 10px;
     border-radius: 10px;
+    font-size: 30px;
+}
+.pickup:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.cars img{
+    width: 45px;
+    display: inline-block;
+    padding: 5px;
+}
+.list{
+    width: 270px;
+    border-radius: 10px;
+}
+.cars li:hover{
+    background: rgba(54,30,131,0.09);
     
+}
+/*.cars span{
+    display: inline-block;
+}
+*/
+/*********************************************map2****************************/
+.result{
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+    left:10px;
+    color: #000;
+    border-radius: 15px;
+    font-size: 30px;
+    background-color: #fff;
+}
+.result img{
+    width: 100px;
+    display: inline-block;
+    padding: 5px;
+}
+.text{
+    font-size: 15px;
+}
+/*********************************************DRIVER****************************/
+.logo-driver{
+    width: 50px;
+}
+.photo{
+    width: 100px;
+    margin: auto;
+}
+.phot{
+    padding: 100px;
+}
+.options-payment{
+    border-radius: 15px; 
 }
 /*********************************************PLACEHOLDER****************************/
 .user input::-webkit-input-placeholder {
