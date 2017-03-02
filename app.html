@@ -10,13 +10,32 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-family.css">
 </head>
 <body>
     <div id="map" class="themap"></div>
-    <header class="text-align center">
-        <img src="images/fc0.logo_standard_silver.png" alt="" class="img-responsive img_mapita">
+<!------------------------------------HEADER---------------------------->
+    <header>
+       <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="photo_fb_map">
+                    <!--la foto-->
+                    </div>  
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="images/Lyft_logo.png" alt="" class="img-responsive img_mapita">  
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                    <div class="gift_map pull-right">
+                        <i class="fa fa-gift"></i>
+                    </div> 
+               </div>  
+            </div>   
+       </div>
     </header>
+<!-----------------------------------CAR-OPTIONS---------------------------->
     <div class="container-fluid text-center set_pickup">
         <div class="input-group">
            <div class="input-group-btn dropup cars">
@@ -82,9 +101,11 @@
                     </div>       
                 </div>
             </div>
-            <div class="form-control">204 miguel grau</div>
+<!-----------------------------------DIV-DIRECTION---------------------------->
+            <div class="form-control text-left"><span>204 Miguel Grau</span></div>
         </div>
     </div>
+<!-----------------------------------BUTTON-SET PICKUP--------------------------->
     <a class="pickup text-center" href="map2.html">Set pickup</a>   
 <!----------------------------------------------------------SCRIPT-------------------------------->              
 <script src="jquery/app2.js"></script>                            

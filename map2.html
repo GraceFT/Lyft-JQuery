@@ -9,21 +9,51 @@
 	<script src="jquery/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/font-family.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     
 </head>
 <body>
     <div id="map" class="themap"></div>
-    
+<!------------------------------------HEADER---------------------------->
+    <header>
+       <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="photo_fb_map">
+                    <!--la foto-->
+                    </div>  
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="images/Lyft_logo.png" alt="" class="img-responsive img_mapita">  
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                    <div class="gift_map pull-right">
+                        <i class="fa fa-gift"></i>
+                    </div> 
+               </div>  
+            </div>   
+       </div>
+    </header>
+<!---------------------------------------INFO-CONTENT-CAR----------------------->
     <div class="container-fluid text-center result">
+    
+        <!---------------------------------------INFO-iconos----------------------->
         <div class="row iconos">
-            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-                <i class="fa fa-arrow-left"></i>    
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <a href="app.html">
+                    <div class="arrow_left pull-left">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                </a>    
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                <i></i>
-            </div>        
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="arrow_right pull-right">
+                    <i class="fa fa-location-arrow"></i>
+                </div>    
+            </div>             
         </div>
+        <!--------------------------------------CAR-DESCRIPTION---------------------->
         <div class="row car_description">
             <div class="col-md-6 col-sm-6 col-xs-6 text-right">
                 <img src="images/1488350920_sedan.png" alt="">    
@@ -35,6 +65,7 @@
                 </ul>
             </div>        
         </div>
+         <!---------------------------------------CAR-PAYMENT----------------------->
         <div class="row car_payment">
             <div class="col-md-6 col-sm-6 col-xs-6 personal">
                 <ul class="list-unstyled">
@@ -49,24 +80,23 @@
                 </ul>
             </div>    
         </div>
+        <!---------------------------------------INFO-iconos pequeños----------------------->
         <div class="row car_direction text-left">
-            <div class="col-md-1 col-sm-1 col-xs-1 text-center">
+            <div class="col-md-2 col-sm-2 col-xs-2 text-center">
                <ul class="list-unstyled">
                     <li style="color:indigo;"><i class="fa fa-circle"></i></li>
                     <li style="color: rgba(0,0,0,0.5);">|</li>
                     <li style="color:deeppink;"><i class="fa fa-circle"></i></li>
                 </ul>
             </div>
-            <div class="col-md-11 col-sm-11 col-xs-11 first_direction">
+            <div class="col-md-10 col-sm-10 col-xs-10 first_direction">
                 <div>2300 Harrison Street</div>          
                 <div>Caltrain Station</div>          
             </div>         
         </div>     
     </div>
     <a class="request text-center" href="driver.html">Request Lyft</a>    
-<!----------------------------------------------------------SCRIPT-------------------------------->                  
-                        
-<script src="jquery/app2.js"></script>                            
+<!----------------------------------------------------------SCRIPT-------------------------------->                              <script src="jquery/app2.js"></script>                            
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPgzHzDKyDVwC5g2fdnc7PjOI1Gcj6-08&callback=initMap"
         async defer></script>                                
 </body>
