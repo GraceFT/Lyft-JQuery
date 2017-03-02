@@ -1,4 +1,4 @@
-*{outline: 1px solid rgba(0,255,0,0.5);}
+/*{outline: 1px solid rgba(0,255,0,0.5);}*/
 /********************************************************FRONT PAGE********************/
 .background{
     background-image: url(../images/orig_230387.jpg);
@@ -60,7 +60,7 @@
     font-size:30px;
     color: #000;
 }
-.next{
+.next, .next_driver{
     background-color: #ff00bf;
     position: absolute;
     padding: 30px;
@@ -68,7 +68,7 @@
     right: 0;
     left:0;
 }
-.next a{
+.next a, .next_driver a{
     color: #fff;
     font-size: 30px;
     text-decoration: none;
@@ -129,15 +129,12 @@
 /************************MAPA****************************/
 .themap{
     height: 100%; 
-  width: 100%; 
-  position:absolute;   
-}
+    width: 100%; 
+    position:absolute;}
 .pickup{
-    background-color: rgb(54,30,131);
-}
+    background-color: rgb(54,30,131);}
 .request{
-      background-color: rgb(255,0,191);
-}
+      background-color: rgb(255,0,191);}
 .pickup, .request{
     position: absolute;
     padding: 20px;
@@ -146,61 +143,119 @@
     left:10px;
     color: #fff;
     border-radius: 10px;
-    font-size: 30px;
-}
-.pickup:hover{
+    font-size: 30px;}
+.pickup:hover, .request:hover{
     text-decoration: none;
     color: #fff;
 }
 .cars img{
-    width: 45px;
-    display: inline-block;
-    padding: 5px;
+    width: 70px; 
 }
 .list{
     width: 270px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
-.cars li:hover{
-    background: rgba(54,30,131,0.09);
-    
+.cars_hover div{
+    display: inline-block;
+    margin: 0 5px;
 }
+.cars_hover{
+    padding: 5px;
+}
+.cars_hover:hover{
+    background-color: rgba(54,30,131,0.1);
+}
+.img_mapita{
+    position: absolute;
+    width: 100px;
+    margin: 
+}
+
 /*.cars span{
     display: inline-block;
 }
 */
 /*********************************************map2****************************/
-.result{
+.result, .set_pickup{
     position: absolute;
     bottom: 100px;
     right: 10px;
     left:10px;
     color: #000;
-    border-radius: 15px;
     font-size: 30px;
-    background-color: #fff;
+    font-size: 14px;
+}
+.car_description, .car_payment{
+    background: #f3f3f5;
+}
+.car_direction{
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .result img{
     width: 100px;
-    display: inline-block;
-    padding: 5px;
 }
-.text{
-    font-size: 15px;
+.car_description{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.car_description ul{
+    margin: 10px;
+}
+.car_description strong{
+    font-size: 20px;
+}
+.car_description, .car_payment{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.car_payment .personal{
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.result small{
+    color: rgba(0,0,0,0.5);
+}
+.car_direction i{
+    font-size:10px;
+}
+.first_direction div{
+    padding: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 /*********************************************DRIVER****************************/
+header{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
 .logo-driver{
-    width: 50px;
+    width: 55px;
+    display: inline-block;
 }
-.photo{
-    width: 100px;
-    margin: auto;
+.photo_fb{
+     border-radius: 100%;
+     width: 90px;
+     margin: auto;
 }
-.phot{
-    padding: 100px;
+.content_photo{
+    padding: 75px;
 }
-.options-payment{
-    border-radius: 15px; 
+.payment_price{
+    padding: 30px;
+    font-size: 30px;
+}
+.options_payment button{
+    background: none;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.options_payment button:hover{
+    background: rgb(255,0,191);
+    color:#fff;
+}
+.next_driver{
+    background-color: #474c62;
+}
+.self_info{
+    margin: 0  10px; 
 }
 /*********************************************PLACEHOLDER****************************/
 .user input::-webkit-input-placeholder {
