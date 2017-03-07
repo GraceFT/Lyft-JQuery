@@ -24,7 +24,7 @@ $(document).ready(init);
         //alert(_info.destino);
         //alert(_info.estimado.min);
         //console.log($('#price_stimate'));
-        $('#price_stimate').text(_info.estimado.moneda + _info.estimado.min + _info.estimado.max);
+        $('#price_stimate').text(_info.estimado.moneda + _info.estimado.min +'-'+ _info.estimado.max);
         $('#origin').html(_info.origen);
         $('#destiny').html(_info.destino);
     }

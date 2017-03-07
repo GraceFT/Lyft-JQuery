@@ -226,7 +226,7 @@ header{
         width: 70px; 
     }
     .list{
-        width: 280px;
+        width: 270px;
         border-radius: 8px;
     }
     .list small{
@@ -331,7 +331,8 @@ header{
 /************PHOTO_fb**********/
 .photo_fb{
      border-radius: 100%;
-     width: 90px;
+     width: 150px;
+    height: 150px;
      margin: auto;
 }
 .content_photo{
