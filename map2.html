@@ -76,7 +76,7 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <ul class="list-unstyled">
-                    <li>$6-12</li>
+                    <li id="price_stimate">-</li>
                     <li><small>Price stimate</small></li>
                 </ul>
             </div>    
@@ -91,14 +91,20 @@
                 </ul>
             </div>
             <div class="col-md-10 col-sm-10 col-xs-10 first_direction">
-                <div>2300 Harrison Street</div>          
-                <div>Caltrain Station</div>          
+                <div id="origin">2300 Harrison Street</div>          
+                <div id="destiny">Caltrain Station</div>          
             </div>         
         </div>     
     </div>
     <a class="request text-center" href="driver.html">Request Lyft</a>    
-<!----------------------------------------------------------SCRIPT-------------------------------->                              <script src="jquery/app2.js"></script>                            
+<!----------------------------------------------------------SCRIPT-------------------------------->                              
+<script
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+  integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
+  crossorigin="anonymous"></script>
+<script src="jquery/app2.js"></script> <!--mapa-->  
+<script src="jquery/app3.js"></script> <!--AJAX-->                                       
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPgzHzDKyDVwC5g2fdnc7PjOI1Gcj6-08&callback=initMap"
-        async defer></script>                                
+        async defer></script>                                    
 </body>
 </html>    
