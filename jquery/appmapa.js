@@ -8,7 +8,8 @@ function mapa(position)
     var latitud= position.coords.latitude;
     var longitud= position.coords.longitude;
     
-    var map = new google.maps.LatLng(latitud,longitud); 
+    var map = new google.maps.LatLng(latitud,longitud);
+    //console.log(map);
     var property={center: map,zoom: 14,mapTypeControl:false,};
     
     var mapita = new google.maps.Map(contain,property);
