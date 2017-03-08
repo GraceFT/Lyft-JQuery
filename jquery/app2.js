@@ -3,7 +3,6 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -16.457389199999998, lng: -71.5315308},
     zoom: 15
-    
   });
   var infoWindow = new google.maps.InfoWindow({map: map});
 
@@ -34,6 +33,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: The Geolocation service failed.' :
                         'Error: Your browser doesn\'t support geolocation.');
 }
+
 /*var miMap;
 // la funcion se carga cuando la funcion se acaba de cargar
 // se puede cambiar el nombre en el html

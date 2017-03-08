@@ -2,6 +2,16 @@ $(document).ready(init);
 
     function init(){
         solicitarEstimado();
+        ////////TO GET THE CHOOSEN-CAR////////////////
+        var imageCar= $("#car_img");
+        var nameCar= $("#cars_name");
+        var descripCar= $("#cars_descrip");
+        var imagesCars = localStorage.getItem("carImage");
+        var namesCars = localStorage.getItem("carName");
+        var descriptCars = localStorage.getItem("carDescrip");
+        imageCar.attr({"src":imagesCars});
+        nameCar.text(namesCars);
+        descripCar.text(descriptCars);
     }
 
     function solicitarEstimado()
@@ -29,6 +39,10 @@ $(document).ready(init);
         $('#destiny').html(_info.destino);
     }
     
+    
+
+
+
 //$('#list').on('click','.cars_hover',function(){
     //    console.log( $(this));
     //    $(this);
