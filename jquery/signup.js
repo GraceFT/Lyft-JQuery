@@ -16,24 +16,25 @@ function init(){
 		$("#flag-country").attr({'src': localStorage.getItem('cImage')});
 		$("#code-country").text(localStorage.getItem('codesPhone'));
 	}
-    
-    //$("#input").keydown(justNumbers);
 }
                 //********functions to validate the localstorage*******//
-function  validateLocalStorageImg()
-    {
+function  validateLocalStorageImg(){
 	return(localStorage.getItem('cImage') == null);
     }
-function  validateLocalStorageCode()
-    {
+function  validateLocalStorageCode(){
 	return (localStorage.getItem('codesPhone') == null);
     }
+
 ///////////////////////GET RANDOM NUMBER////////////////////////////////////////////
+
 function getRandomArbitrary(min, max) {
  return Math.random() * ((max - min) + min)  
 }
+
 ///////////////////////Create an Alert////////////////////////////////////////////
-function toDoAnAlert(){
+
+function toDoAnAlert()
+{
     if(numberLong()==true){
         var number = getRandomArbitrary(100,900);
         var completeCode= "LAB-" + Math.floor(number);
@@ -44,7 +45,9 @@ function toDoAnAlert(){
     }
 }
 ////////////////////Validate input phone-number////////////////////////////////////////////
-function numberLong(){
+
+function numberLong()
+{
     var userNumber = $("#user-number");
     var isVal= false;
     if(userNumber.val().match(/([0-9]+)/) && userNumber.val().length >= 9){
@@ -57,7 +60,9 @@ function numberLong(){
     }
     return isVal;
 }
+
 //////////////////////VALIDATE with keycode-aditional code/////////////////////////////
+//$("#input").keydown(justNumbers);
 /* function justNumbers(){
     if(event.keyCode<45||event.keyCode>57)
         event.preventDefault();

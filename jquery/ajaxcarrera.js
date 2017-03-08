@@ -27,7 +27,3 @@ $(document).ready(init);
         $('#imagen_driver').attr({"src":_info.conductor.url});
         $('#total_payment').text(_info.estimado.moneda + _info.final);
     }
-//$('#list').on('click','.cars_hover',function(){
-    //    console.log( $(this));
-    //    $(this);
-    //})

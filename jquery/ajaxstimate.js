@@ -3,17 +3,31 @@ $(document).ready(init);
     function init(){
         solicitarEstimado();
         ////////TO GET THE CHOOSEN-CAR////////////////
-        var imageCar= $("#car_img");
-        var nameCar= $("#cars_name");
-        var descripCar= $("#cars_descrip");
-        var imagesCars = localStorage.getItem("carImage");
-        var namesCars = localStorage.getItem("carName");
-        var descriptCars = localStorage.getItem("carDescrip");
-        imageCar.attr({"src":imagesCars});
-        nameCar.text(namesCars);
-        descripCar.text(descriptCars);
-    }
 
+if (valLocalStorageImgCar() || valLocalStorageCarName()|| valLocalStorageCarDescrip())
+    {
+        $("#car_img").attr({'src': 'images/line.png'});
+		$("#cars_name").text('Lyft');
+		$("#cars_descrip").text('Fast ride, 4 seats');
+	}
+	else
+	{
+		$("#car_img").attr({'src': localStorage.getItem('carImage')});
+		$("#cars_name").text(localStorage.getItem('carName'));
+		$("#cars_descrip").text(localStorage.getItem('carDescrip'));
+	}
+}
+    //********functions to validate the localstorage*******//
+    function  valLocalStorageImgCar(){
+        return(localStorage.getItem('carImage') == null);}
+
+    function  valLocalStorageCarName(){
+        return (localStorage.getItem('carName') == null);}
+    
+    function  valLocalStorageCarDescrip(){
+        return (localStorage.getItem('carDescrip') == null);}
+
+///*****AJAX**********AJAX**********AJAX******///
     function solicitarEstimado()
     {
         $.ajax({
@@ -39,11 +53,3 @@ $(document).ready(init);
         $('#destiny').html(_info.destino);
     }
     
-    
-
-
-
-//$('#list').on('click','.cars_hover',function(){
-    //    console.log( $(this));
-    //    $(this);
-    //})
