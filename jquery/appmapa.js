@@ -1,5 +1,4 @@
-$(document).ready(init);
-function init(){
+function initMap(){
     navigator.geolocation.getCurrentPosition(mapa,error);
 }
 
@@ -15,7 +14,7 @@ function mapa(position)
     var mapita = new google.maps.Map(contain,property);
     
     var positioncar1= {lat: latitud+0.002 , lng: longitud-0.01};
-    var positioncar2= {lat: latitud+0.003 , lng: longitud-0.004};
+    var positioncar2= {lat: latitud+0.003 , lng: longitud-0.005};
     var positioncar3= {lat: latitud-0.001 , lng: longitud+0.01};
     
     var marker = new google.maps.Marker({
