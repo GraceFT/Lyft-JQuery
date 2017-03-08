@@ -1,4 +1,4 @@
-/*{outline: 1px solid rgba(0,255,0,0.5);}*/
+*{outline: 1px solid rgba(0,255,0,0.5);}*/
 /********************************************************FONT*FAMILY********************/
 /* cyrillic-ext */
 @font-face {
@@ -183,7 +183,7 @@ body{
     height: 100%; 
     width: 100%; 
     position:absolute;}
-header{
+.header_icons{
     padding: 10px 0;
 }
 /************BUTTONS**********/
@@ -204,6 +204,9 @@ header{
         text-decoration: none;
         color: #fff;
     }
+.map_location{
+    border-left: none;
+}
 /************ICONS-TOP**********/
     .gift_map{
         border-radius: 100%;
@@ -330,6 +333,7 @@ header{
     margin: 0  10px; 
 }
 /************PHOTO_fb**********/
+
 .photo_fb{
      border-radius: 100%;
      width: 130px;
@@ -347,6 +351,10 @@ header{
 .options_payment button:hover{
     background: rgb(255,0,191);
     color:#fff;
+}
+.btn_payment{
+    border-left: none;
+    color:rgba(0,0,0,0.3);
 }
 /************PRICE-PAYMENT**********/
 .payment_price{

@@ -16,13 +16,13 @@
 <body>
     <div id="map" class="themap"></div>
 <!------------------------------------HEADER---------------------------->
-    <header>
+    <header class="header_icons">
        <div class="container-fluid">
             <div class="row">
                <div class="col-md-4 col-sm-4 col-xs-4">
                     <div class="photo_fb_map">
                     <!--la foto-->
-                        <img src="images/10391831_931493416943874_3153229853313733461_n.jpg" alt="">
+                        <img src="images/10391831_931493416943874_3153229853313733461_n.jpg" alt="user_photo">
                     </div>   
                </div>
                <div class="col-md-4 col-sm-4 col-xs-4">
@@ -44,22 +44,22 @@
                     <i class="fa fa-chevron-circle-down"></i>
                 </button>
                 <div class="dropdown-menu list" id="list_cars">
-                    <!--LIST-CARS-->       
+                    <!--LIST-CARS-choosecar.js-->       
                 </div>
             </div>
 <!-----------------------------------DIV-DIRECTION---------------------------->
-            <div class="form-control text-left"><span>204 Miguel Grau</span></div>
+            <div class="form-control text-left map_location"><span>204 Miguel Grau</span></div>
         </div>
     </div>
 <!-----------------------------------BUTTON-SET PICKUP--------------------------->
-    <a class="pickup text-center" href="map2.html">Set pickup</a>   
+    <a class="pickup text-center" id="set_pickup" href="map2.html">Set pickup</a>   
 <!----------------------------------------------------------SCRIPT-------------------------------->
 <script
   src="https://code.jquery.com/jquery-1.11.3.min.js"
   integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
   crossorigin="anonymous"></script>
 <script src="jquery/choosecar.js"></script><!---choose car-->             
-<script src="jquery/appmapa.js"></script> <!--mapa-->                            
+<script src="jquery/appmapa.js"></script> <!--mapa-->                           
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPgzHzDKyDVwC5g2fdnc7PjOI1Gcj6-08&callback=initMap"
         async defer></script>                                
 </body>

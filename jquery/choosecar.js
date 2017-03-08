@@ -21,6 +21,7 @@ var cars = '[{"nombre": "Line","time":"3", "image":"images/line.png", "descripti
         $(this).on('click',onClick);
     });  
 }
+
 function onClick(evt)
 {
     var carImage=$(evt.currentTarget).find(".img_carro").attr("src");
@@ -30,4 +31,7 @@ function onClick(evt)
     localStorage.setItem("carImage",carImage);
     localStorage.setItem("carName",carName);
     localStorage.setItem("carDescrip",carDescrip);
+    
 }
+
+
