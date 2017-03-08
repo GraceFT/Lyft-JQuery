@@ -38,9 +38,9 @@ if (valLocalStorageImgCar() || valLocalStorageCarName()|| valLocalStorageCarDesc
             //console.log(_data);
             update(_data); //pasamos la funcion 
         //para poder leer los datos
-        });//.fail(function(){
-            //alert('fallo el sitio');
-        //});
+        }).fail(function(){
+            alert('fallo el sitio');
+        });
     }
     
     function update(_info)
