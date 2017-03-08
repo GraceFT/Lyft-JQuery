@@ -1,22 +1,38 @@
 $(document).ready(init);
-///////////////////////////////////////////INIT WITH SET INFO////////////////////////////////////////////
+/////////////////////INIT WITH SET INFO////////////////////////////////////////////
 function init(){
     $('#btn-next').on("click",toDoAnAlert);
     $('#user-number').on("keyup",numberLong);
-    /*$("#input").keydown(justNumbers)*/
     var imgSrc= $("#flag-country");
     var codePais= $("#code-country");
-    var imagesC = localStorage.getItem("cImage");
-    var codeC = localStorage.getItem("codesPhone");
-    var phone = localStorage.getItem("phone");
-    imgSrc.attr({"src":imagesC});
-    codePais.text(codeC); 
+    
+    if (validateLocalStorageCode() || validateLocalStorageImg())
+    {
+        $("#flag-country").attr({'src': 'images/flags/flat/16/Peru.png'});
+		$("#code-country").text('+51');
+	}
+	else
+	{
+		$("#flag-country").attr({'src': localStorage.getItem('cImage')});
+		$("#code-country").text(localStorage.getItem('codesPhone'));
+	}
+    
+    //$("#input").keydown(justNumbers);
 }
-///////////////////////////////////////////GET RANDOM NUMBER////////////////////////////////////////////
+                //********functions to validate the localstorage*******//
+function  validateLocalStorageImg()
+    {
+	return(localStorage.getItem('cImage') == null);
+    }
+function  validateLocalStorageCode()
+    {
+	return (localStorage.getItem('codesPhone') == null);
+    }
+///////////////////////GET RANDOM NUMBER////////////////////////////////////////////
 function getRandomArbitrary(min, max) {
  return Math.random() * ((max - min) + min)  
 }
-///////////////////////////////////////////Create an Alert////////////////////////////////////////////
+///////////////////////Create an Alert////////////////////////////////////////////
 function toDoAnAlert(){
     if(numberLong()==true){
         var number = getRandomArbitrary(100,900);
@@ -27,7 +43,7 @@ function toDoAnAlert(){
         next.attr("href","info-user.html");
     }
 }
-///////////////////////////////////////////Validate input phone-number////////////////////////////////////////////
+////////////////////Validate input phone-number////////////////////////////////////////////
 function numberLong(){
     var userNumber = $("#user-number");
     var isVal= false;
@@ -41,9 +57,8 @@ function numberLong(){
     }
     return isVal;
 }
-///////////////////////////////////////////VALIDATE LASTNAME////////////////////////////////////////////
+//////////////////////VALIDATE with keycode-aditional code/////////////////////////////
 /* function justNumbers(){
     if(event.keyCode<45||event.keyCode>57)
         event.preventDefault();
-}
-    */
+}*/
