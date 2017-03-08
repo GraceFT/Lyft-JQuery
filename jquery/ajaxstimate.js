@@ -1,10 +1,13 @@
 $(document).ready(init);
 
-    function init(){
+function init(){
         solicitarEstimado();
-        ////////TO GET THE CHOOSEN-CAR////////////////
-
-if (valLocalStorageImgCar() || valLocalStorageCarName()|| valLocalStorageCarDescrip())
+        validating();
+        
+}
+////////TO GET THE CHOOSEN-CAR////////////////
+function validating(){
+    if (valLocalStorageImgCar() || valLocalStorageCarName()|| valLocalStorageCarDescrip())
     {
         $("#car_img").attr({'src': 'images/line.png'});
 		$("#cars_name").text('Lyft');
@@ -15,8 +18,9 @@ if (valLocalStorageImgCar() || valLocalStorageCarName()|| valLocalStorageCarDesc
 		$("#car_img").attr({'src': localStorage.getItem('carImage')});
 		$("#cars_name").text(localStorage.getItem('carName'));
 		$("#cars_descrip").text(localStorage.getItem('carDescrip'));
-	}
-}
+	   }
+    }
+    
     //********functions to validate the localstorage*******//
     function  valLocalStorageImgCar(){
         return(localStorage.getItem('carImage') == null);}
@@ -48,7 +52,7 @@ if (valLocalStorageImgCar() || valLocalStorageCarName()|| valLocalStorageCarDesc
         //alert(_info.destino);
         //alert(_info.estimado.min);
         //console.log($('#price_stimate'));
-        $('#price_stimate').text(_info.estimado.moneda + _info.estimado.min +'-'+ _info.estimado.max);
+        $('#price_stimate').text(_info.estimado.moneda + _info.estimado.min +' - '+ _info.estimado.max);
         $('#origin').html(_info.origen);
         $('#destiny').html(_info.destino);
     }
