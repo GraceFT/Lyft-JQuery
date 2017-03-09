@@ -10,6 +10,7 @@ function init(){
     function solicitarEstimado()
     {
         $.ajax({
+            type:'GET',
             url:'http://clientes.geekadvice.pe/api/estimado',
             data: {tipo:1}
         }).done(function(_data){ //en vez de success se pone done
