@@ -15,9 +15,7 @@ function init(){
         }).done(function(_data){ //en vez de success se pone done
             //alert('ok');//console.log(_data);
             update(_data); //pasamos la funcion //para poder leer los datos
-        }).fail(function(){
-            alert('fallo el sitio');
-        });
+        })
     }
     
     function update(_info)
