@@ -58,6 +58,7 @@ body{
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
+    height: 100vh;
 }
 .portada{
     background: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.91) 87%,rgba(0,0,0,0.91) 100%); 
