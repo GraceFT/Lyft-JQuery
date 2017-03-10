@@ -53,8 +53,11 @@ body{
     font-family: "Ubuntu";
 }
 .background{
-    background-image: url(../images/orig_230387.jpg) no-repeat center center fixed;
+    background-image: url(../images/orig_230387.jpg);
     background-size: cover;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
